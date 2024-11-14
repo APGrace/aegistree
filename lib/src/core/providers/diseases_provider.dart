@@ -74,6 +74,7 @@ class Disease extends _$Disease {
             image: image!,
             createdAt: data['createdAt'],
             createdBy: data['createdBy'],
+            imagePath: '',
           ).toModel
             ..id = isar.diseaseModels.autoIncrement();
 
@@ -107,6 +108,7 @@ class Disease extends _$Disease {
         image: bytes,
         createdBy: _user.id,
         createdAt: DateTime.now(),
+        imagePath: '',
       );
 
       final model = disease.toModel..id = isar.diseaseModels.autoIncrement();

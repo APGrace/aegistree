@@ -19,6 +19,7 @@ class DiseaseEntity {
     required this.createdAt,
     required this.createdBy,
     this.updatedAt,
+    required String imagePath,
   });
 
   DiseaseModel get toModel => DiseaseModel(
@@ -40,6 +41,7 @@ class DiseaseEntity {
       createdAt: entity.createdAt,
       createdBy: entity.createdBy,
       updatedAt: entity.updatedAt,
+      imagePath: '',
     );
   }
 

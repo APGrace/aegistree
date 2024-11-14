@@ -96,6 +96,16 @@ flutter:
   assets:
     - assets/images/
     - assets/models/
+    - assets/images/anthracnose.jpg
+    - assets/images/BacterialBlight.jpg
+    - assets/images/black_spot-sm.jpg
+    - assets/images/canker.jpg
+    - assets/images/downy-mildew.jpg
+    - assets/images/leaf_spot.jpg
+    - assets/images/powdery_mildew.jpg
+    - assets/images/rust.jpg
+    - assets/images/Shothole.jpg
+    - assets/images/sooty_mold.jpg
     # - assets/images/icons/
     # - assets/images/plant-hand.png
     # - assets/images/small-leaf.png

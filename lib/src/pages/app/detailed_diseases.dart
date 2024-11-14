@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:gap/gap.dart';
 
@@ -15,9 +14,8 @@ class DetailedDiseases extends ConsumerWidget {
       appBar: AppBar(
         title: Text(disease.disease.name),
       ),
-      body: Container(
+      body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
-        decoration: const BoxDecoration(gradient: gradient),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -35,10 +33,8 @@ class DetailedDiseases extends ConsumerWidget {
                   )
                 ],
               ),
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25),
-                ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(25),
                 child: Image.memory(disease.disease.image),
               ),
             ),
@@ -70,8 +66,14 @@ class Details extends ConsumerWidget {
           shadow: [Shadows().defaultShadow],
         ),
         const Gap(2),
-        Koho(description),
-        const Gap(16)
+        // Make description scrollable if it overflows
+        SizedBox(
+          height: 100, // Adjust the height as needed
+          child: SingleChildScrollView(
+            child: Koho(description),
+          ),
+        ),
+        const Gap(16),
       ],
     );
   }
